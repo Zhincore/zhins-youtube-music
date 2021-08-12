@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.dev.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "sonarjs"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "rules": {
+    "quotes": [1, "double"],
+    "no-prototype-builtins": 0,
+    "no-shadow": 1,
+    "@typescript-eslint/semi": [1, "always"],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/ban-ts-comment": 0
+  }
+}

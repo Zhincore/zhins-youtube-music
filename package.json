@@ -1,0 +1,32 @@
+{
+  "name": "zhins-youtube-music",
+  "productName": "YouTube Music",
+  "productDescription": "Electron wrapper for YouTube Music",
+  "version": "1.0.3",
+  "private": true,
+  "main": "dist/app.js",
+  "scripts": {
+    "build:ts": "tsc",
+    "build:electron": "electron-packager ./ zhins-youtube-music --ignore=\"\\/(\\.|src|build|assets|tsconfig)\" --extraResource=\"resources\" --icon=assets/ytm.png --overwrite --out build/",
+    "deb64": "electron-installer-debian --src build/zhins-youtube-music-linux-x64/ --dest build/installers/ --config desktop.config.json --arch amd64",
+    "build": "npm run build:ts && npm run build:electron",
+    "start": "electron .",
+    "dev": "electron -r ts-node/register src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-v3-or-later",
+  "devDependencies": {
+    "@types/wicg-mediasession": "^1.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "electron": "^13.1.9",
+    "electron-installer-debian": "^3.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+  }
+}

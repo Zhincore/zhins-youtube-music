@@ -1,0 +1,9 @@
+{
+  "dest": "dist/installers/",
+  "icon": "resources/ytm.png",
+  "genericName": "Music Player",
+  "section": "sound",
+  "categories": [
+    "AudioVideo", "Audio", "Player"
+  ]
+}
